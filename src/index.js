@@ -1,17 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
+// Using other function from Redux - createStore ()
+// to put all Reducers into the Redux Store object / Global State object
+import { createStore } from 'redux';
+
+// provider component
+import { Provider } from 'react-redux';
+import reducers from './reducers';
+
+import App from './components/App';
+
+// Wrap the App component with the Provider component.
+// pass in a single prop - store which takes in all the reducers
+// STORE is the collections of different Reducers & global state object.
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={createStore(reducers)}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.querySelector('#root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Provider component connects to Redux Store.
+// Instance of Connect component connects to the Provider component
+// to access data in Redux Store.
