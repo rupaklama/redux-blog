@@ -15,7 +15,9 @@ import thunk from 'redux-thunk';
 // provider component
 import { Provider } from 'react-redux';
 
+// reducers
 import reducers from './reducers';
+
 import App from './components/App';
 
 // declare initial Global state object
