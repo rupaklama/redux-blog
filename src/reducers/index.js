@@ -1,6 +1,7 @@
 // redux library
 import { combineReducers } from 'redux';
 import postsReducer from './postsReducer';
+import usersReducer from './usersReducer';
 
 // Create separate Reducers files instead of putting all reducers in One file like here
 // to manage application state & make it scalable. 
@@ -16,6 +17,6 @@ export default combineReducers({
   // dummy reducer when starting out for error message to go away
   // replaceMe: () => 'I am inside global state object - Store!'
   // passing each of our Reducers as key/value properties to create State Object in Redux Store
-  post: postsReducer
-
+  posts: postsReducer,
+  users: usersReducer
 });
