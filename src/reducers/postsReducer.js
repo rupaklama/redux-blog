@@ -9,6 +9,12 @@
 // This reducer processes list of posts fetched with api, 
 // so state is default to empty array for post list
 export default (state=[], action) => {
+//   if (action.type === 'fetch_posts') {
+//     return action.paload
+//   }
+//  return state;
+  
+  // same as above but common way is to use Switch Statement
   switch (action.type) {
     case 'fetch_posts':
       return action.payload;
