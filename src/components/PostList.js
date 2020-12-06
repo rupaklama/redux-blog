@@ -60,3 +60,27 @@ export default connect(mapStateToProps, { fetchPostsAndUsers: fetchPostsAndUsers
 // To access to the provider, use connect() & wrap the component with ()
 // Instance of Connect component connects to the Provider component to access Redux store
 // Connect component handles Action Creators which is pass as props into this react component
+
+
+// NOTE - using mapDispatchToProps 
+// const SagasExample = ({ increment, decrement, value }) => (
+//   <Card>
+//     {value}
+//     <button onClick={increment}>Add 1</button>
+//     <button onClick={decrement}>Minus 1</button>
+//   </Card>
+// );
+
+// const mapStateToProps = state => ({
+//   value: state.app.value
+// });
+
+// const mapDispatchToProps = dispatch => ({
+//   increment: () => dispatch({ type: 'INCREMENT' }),
+//   decrement: () => dispatch({ type: 'DECREMENT' })
+// });
+
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(SagasExample);
