@@ -61,6 +61,8 @@ export default connect(mapStateToProps, { fetchPostsAndUsers: fetchPostsAndUsers
 // Instance of Connect component connects to the Provider component to access Redux store
 // Connect component handles Action Creators which is pass as props into this react component
 
+// NOTE: alternate way of not using mapStateToProps above
+// export default connect(({posts}) => ({posts}), { getUsersRequest })(App);
 
 // NOTE - using mapDispatchToProps 
 // const SagasExample = ({ increment, decrement, value }) => (
